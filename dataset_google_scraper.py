@@ -11,12 +11,11 @@ from selenium.common.exceptions import StaleElementReferenceException
 
 driver = webdriver.Chrome()
 
- 
+
 def scroller(url):
     driver.get(url)
     num_scrolls = 1
     
-
     while True:
         print(f"Number of scrolls: {num_scrolls}")
         elements = driver.find_elements("xpath", "//li[@class='UnWQ5']/div/div[@class='jWBBzf']/div[@class='kCClje']/h1")
